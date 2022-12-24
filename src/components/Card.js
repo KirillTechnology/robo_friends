@@ -1,12 +1,15 @@
 import React from 'react';
+import './Card.css';
 
 const Card = ( { id, name, email } ) => {
     return (
         <div 
-            className='tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5' 
+            className='card tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5' 
             style={{
                 background: 'rgba(20, 0, 0, 0.7)',
-                width:'min(300px)'
+                width:'min(300px)',
+                backfaceVisibility:'visible',
+                transform:'all 1s'
             }}
         >
             <img 

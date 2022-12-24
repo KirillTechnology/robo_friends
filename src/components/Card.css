@@ -1,0 +1,12 @@
+.card:active {
+    transform: rotateY(180deg) !important;
+    filter: hue-rotate(180deg) !important;
+}
+
+.card:active h2 {
+    transform: rotateY(180deg);
+}
+
+.card:active p {
+    transform: rotateY(180deg);
+}
