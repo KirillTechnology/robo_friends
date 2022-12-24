@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CardList from "../components/CardList";
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
+import ErrorBoundary from "../components/ErrorBoundary";
 // import { robots } from '../robots';
 import './App.css';
 
@@ -36,7 +37,7 @@ class App extends Component {
                 <div className="tc">
                     <h1 style={{fontSize:'100px',margin:'0px'}}>RoboFriends</h1>
                     <SearchBox searchChange={this.onSearchChange} />
-                    <h1 className="tc">Loading...</h1> 
+                    <h1 className="tc" style={{ marginTop:'200px' }}>Loading...</h1> 
                 </div>
             )
         } else {
@@ -44,8 +45,10 @@ class App extends Component {
                 <div className="tc">
                     <h1 style={{fontSize:'100px',margin:'0px'}}>RoboFriends</h1>
                     <SearchBox searchChange={this.onSearchChange} />
-                    <Scroll >
-                        <CardList robots={filteredRobots} />
+                    <Scroll>
+                        <ErrorBoundary>
+                            <CardList robots={filteredRobots} />
+                        </ErrorBoundary>
                     </Scroll>
                 </div>
             )
