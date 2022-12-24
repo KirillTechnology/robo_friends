@@ -1,4 +1,5 @@
 import React from "react";
+import './SearchBox.css';
 
 const SearchBox = ({searchChange}) => {
     return (
@@ -7,7 +8,7 @@ const SearchBox = ({searchChange}) => {
                 className='pa3 ba' 
                 type='search' 
                 placeholder='search robots'
-                size='40'
+                // size='20'
                 onChange={searchChange}
                 style = {{
                     background:'rgba(243, 226, 226, 1)',
@@ -15,7 +16,10 @@ const SearchBox = ({searchChange}) => {
                     textAlign:'center',
                     marginBottom:'20px',
                     boxShadow:'0px 4px 10px black',
-                    fontWeight:'bold'
+                    fontWeight:'bold',
+                    boxSizing:'border-box',
+                    width:'200px',
+                    transition:'all 1s'
                 }}
             />
         </div>
