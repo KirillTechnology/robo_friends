@@ -14,7 +14,8 @@ const SearchBox = ({searchChange}) => {
                     borderRadius:'50%',
                     textAlign:'center',
                     marginBottom:'20px',
-                    boxShadow:'0px 8px 4px black' 
+                    boxShadow:'0px 4px 10px black',
+                    fontWeight:'bold'
                 }}
             />
         </div>
